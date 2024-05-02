@@ -10,5 +10,5 @@ WORKDIR /var/www/html
 # Expone el puerto 80 para acceder a la aplicación
 EXPOSE 80
 
-# Comando para ejecutar la aplicación
-CMD ["php", "-S", "0.0.0.0:80"]
+# Comando para ejecutar la aplicación, sirviendo acceso.html
+CMD ["php", "-S", "0.0.0.0:80", "-t", "/var/www/html", "acceso.html"]
